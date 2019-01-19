@@ -21,6 +21,9 @@ import rosegraphics as rg
 
 
 def main():
+    hypotenuse(a,b)
+    turtles(10, 'blue')
+    turtles(2,'purple')
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -44,6 +47,8 @@ print(hypotenuse(a,b))
 #
 # TODO: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
+
+
 #
 ###############################################################################
 
@@ -53,12 +58,17 @@ print(hypotenuse(a,b))
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
-def turtles (thickness, color):
-    rg.TurtleWindow()
+def turtles (thickness,color):
+    window = rg.TurtleWindow()
     dan = rg.SimpleTurtle()
     karen = rg.SimpleTurtle()
+    dan.speed = 1
+    karen.speed = 1
     dan.pen = rg.Pen('green',thickness)
     karen.pen = rg.Pen(color,5)
+    dan.forward(100)
+    karen.backward(100)
+    window.close_close_on_mouse_click()
 
 #   The function should do the following (in the order listed):
 #     a. Constructs a TurtleWindow.
@@ -79,7 +89,7 @@ def turtles (thickness, color):
 #
 # TODO: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
-#
+main()
 ###############################################################################
 
 
