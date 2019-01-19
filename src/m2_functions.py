@@ -28,12 +28,18 @@ def main():
 
 
 ###############################################################################
-# TODO: 3a.  Define a function immediately below this _TODO_.
+# DONE: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
 #     HINT: Apply the Pythagorean theorem.
-#
+import math as m
+a = 3
+b = 4
+def hypotenuse(a,b):
+    c = m.sqrt(a**2+b**2)
+    return(c)
+print(hypotenuse(a,b))
 #   You may name the function and its parameters whatever you wish.
 #
 # TODO: 3b.  In main, CALL your function and print the returned value,
@@ -47,7 +53,13 @@ def main():
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
-#
+def turtles (thickness, color):
+    rg.TurtleWindow()
+    dan = rg.SimpleTurtle()
+    karen = rg.SimpleTurtle()
+    dan.pen = rg.Pen('green',thickness)
+    karen.pen = rg.Pen(color,5)
+
 #   The function should do the following (in the order listed):
 #     a. Constructs a TurtleWindow.
 #     b. Constructs two SimpleTurtles, where:
