@@ -126,6 +126,12 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
 
 
 def try_methods():
+    dan = rg.SimpleTurtle()
+    dan.pen = rg.Pen('brown', 5)
+    dan.forward(150)
+    dan.left(90)
+    dan.forward(50)
+    dan.backward(100)
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -136,10 +142,9 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
-
 
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
