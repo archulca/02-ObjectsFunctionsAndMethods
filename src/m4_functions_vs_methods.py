@@ -174,6 +174,28 @@ def try_functions():
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
 def try_methods_and_functions():
+    dave = rg.SimpleTurtle()
+    dave.pen = rg.Pen('blue', 5)
+    dave.backward(150)
+    dave.speed = 1
+    for _ in range (2):
+        dave.draw_square(100)
+        dave.left(30)
+    dave.speed = 5
+    dave.pen = rg.Pen('red', 5)
+    for _ in range (10):
+        dave.draw_square(50)
+        dave.left(15)
+    dave.speed = 100
+    dave.pen = rg.Pen('red', 35)
+    for _ in range (8):
+        dave.draw_square(300)
+        dave.left(60)
+    dave.pen = rg.Pen('black', 3)
+    dave.backward(200)
+    dave.draw_circle(30)
+    dave.draw_square(50)
+
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
@@ -206,7 +228,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 6. Implement and test this function, per its doc-string above.
+    # DONE: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
