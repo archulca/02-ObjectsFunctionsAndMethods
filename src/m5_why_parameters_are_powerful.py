@@ -21,8 +21,12 @@ def main():
     # comment-out the following two statements and replace them
     # by calls to   better_draw_circles   et al as needed.
     # -------------------------------------------------------------------------
-    draw_circles(rg.Point(100, 50))
-    draw_circles(rg.Point(-200, 0))
+    # draw_circles(rg.Point(100, 50))
+    # draw_circles(rg.Point(-200, 0))
+
+    better_draw_circles(rg.Point(0,0), 20)
+    better_draw_circles(rg.Point(100,100),10)
+
 
     window.update()
     window.close_on_mouse_click()
@@ -113,7 +117,7 @@ def draw_circles(point):
 #   just as in   draw_circles.  But if that new parameter is given the value 3,
 #   then the circles should have radii:  3  6  9  12  15  18 ..., respectively.
 #
-# TODO: 3b.
+# DONE: 3b.
 #   In   main  at the place indicated, comment-out the two existing calls
 #   to  draw_circles  and add at least two calls to the improved
 #   better_draw_circles  function, to TEST that your modified code is correct
@@ -122,7 +126,7 @@ def draw_circles(point):
 # #############################################################################
 
 
-def better_draw_circles(point):
+def better_draw_circles(point, d_radii):
     """
     Starts out the same as the   draw_circles   function defined ABOVE.
     You Will make it an IMPROVED, MORE POWERFUL function per the above _TODO_.
@@ -138,11 +142,11 @@ def better_draw_circles(point):
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(15)
+        turtle.forward(d_radii)
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(15 * k)  # Radius 15, 30, 45, 60, ...
+        turtle.draw_circle(d_radii * k)  # Radius 15, 30, 45, 60, ...
 
 
 ###############################################################################
