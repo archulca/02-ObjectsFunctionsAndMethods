@@ -39,13 +39,19 @@ def main():
 import math as m
 a = 3
 b = 4
-def hypotenuse(a,b):
+
+
+def hypotenuse(a, b):
     c = m.sqrt(a**2+b**2)
     return(c)
+
+
 print(hypotenuse(a,b))
+
+
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 
 
@@ -58,7 +64,7 @@ print(hypotenuse(a,b))
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
-def turtles (thickness,color):
+def turtles(thickness,color):
     window = rg.TurtleWindow()
     dan = rg.SimpleTurtle()
     karen = rg.SimpleTurtle()
@@ -68,7 +74,7 @@ def turtles (thickness,color):
     karen.pen = rg.Pen(color,5)
     dan.forward(100)
     karen.backward(100)
-    window.close_close_on_mouse_click()
+    window.close_on_mouse_click()
 
 #   The function should do the following (in the order listed):
 #     a. Constructs a TurtleWindow.
